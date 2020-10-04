@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "server": "ts-node --project tsconfig.server.json src/function/index.ts"
   },
   "dependencies": {
     "@material-ui/lab": "^4.0.0-alpha.56",
