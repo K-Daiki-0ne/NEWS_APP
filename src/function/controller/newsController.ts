@@ -9,6 +9,6 @@ import { apiRequest } from '../api/news';
  */
 export const get = async (req: Request, res: Response) => {
   const data = await apiRequest();
-  const response = data.data;
+  const response = data.data.articles;
   res.send(response);
 }
