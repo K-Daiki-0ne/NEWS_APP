@@ -1,6 +1,6 @@
 type SourceType = {
   id: null;
-  name: string
+  name: string;
 }
 
 export type NewsType = {
