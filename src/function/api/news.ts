@@ -1,12 +1,10 @@
 import axios from 'axios';
+import { reqUrl } from '../config/url';
 
 export const apiRequest = async () => {
-  const newsUrl:string = '';
-  const apiKey: string | undefined = '';
+  const req: string = reqUrl();
 
-  const reqUrl: string = `${newsUrl}/${apiKey}`;
-
-  const response = await axios.get(reqUrl);
+  const response = await axios.get(req);
 
   return response;
 }
