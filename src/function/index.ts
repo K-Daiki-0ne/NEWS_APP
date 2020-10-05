@@ -1,5 +1,6 @@
-import express from 'express';
+import express, { Application } from 'express';
 import next from 'next';
+import router from './router/router';
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -9,8 +10,8 @@ const port = process.env.PORT || 3001;
 async function main() {
   try {
     await app.prepare();
-    const server = express();
-
+    const server: Application = express();
+    server.use(router);
     server.listen(port, () => console.log('Hello Next Server'));
   } catch (error) {
     console.log('Server listening ...NO');
