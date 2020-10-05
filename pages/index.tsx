@@ -4,6 +4,7 @@ import { Container } from '@material-ui/core';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import { HomeCompoent } from '../src/components/HomeComponent';
 
 export default function Home() {
   return (
@@ -26,7 +27,7 @@ export default function Home() {
           fixed
           maxWidth='xs'
         >
-          <p>Hello NEXT</p>
+          <HomeCompoent />
         </Container>
       </main>
 
