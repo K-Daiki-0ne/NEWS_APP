@@ -1,5 +1,6 @@
 import express, { Application } from 'express';
 import next from 'next';
+import cors from 'cors';
 import router from './router/router';
 
 const dev = process.env.NODE_ENV !== 'production';
@@ -11,6 +12,7 @@ async function main(): Promise<void> {
   try {
     await app.prepare();
     const server: Application = express();
+    server.use(cors({ origin: 'http://localhost:3000' }));
     server.use(router);
     server.listen(port, () => console.log('Hello Next Server'));
   } catch (error) {
