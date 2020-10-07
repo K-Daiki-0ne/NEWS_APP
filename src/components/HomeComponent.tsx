@@ -1,15 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { newsRequest } from '../api/news';
+import { NewsType } from '../type/news';
 import CardComponent from './CardComponent/CardComponent'
 
 export const HomeCompoent:React.FC = (): JSX.Element => {
-  const [news, setNews] = useState();
+  const [news, setNews] = useState<NewsType[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     setLoading(false);
     newsRequest()
-    .then((data: any) => setNews(data))
+    .then((data: NewsType[]) => setNews(data))
     .then(() => setLoading(true))
     .catch(() => console.log('API Connect ...NO'));
   }, [])
