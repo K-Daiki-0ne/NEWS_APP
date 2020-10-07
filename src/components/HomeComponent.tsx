@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { newsRequest } from '../api/news';
 import { NewsType } from '../type/news';
-import CardComponent from './CardComponent/CardComponent'
+import CardComponent from './CardComponent/CardComponent';
+import HomeLoding from './HomeLoading/HomeLoading';
 
 export const HomeCompoent:React.FC = (): JSX.Element => {
   const [news, setNews] = useState<NewsType[]>([]);
@@ -21,7 +22,7 @@ export const HomeCompoent:React.FC = (): JSX.Element => {
     </div>
   ) : (
     <div >
-      <CardComponent />
+      <HomeLoding />
     </div>
   )
 }
