@@ -4,7 +4,9 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 const HomeLoading: React.FC = ():JSX.Element => {
   return (
     <div>
-      <CircularProgress />
+      <CircularProgress 
+        size={260}
+      />
     </div>
   );
 }
