@@ -28,9 +28,8 @@ export const HomeCompoent:React.FC = (): JSX.Element => {
   const currentNews: NewsType[] = news.slice(indexOfFirstNews, indexOfLastNews);
 
   // Change page
-  const handleChangePage = (event, newPage) => {
+  const handleChangePage = (event: React.MouseEvent<HTMLButtonElement> | null, newPage: number) => {
     setCurrentPage(newPage);
-    console.log(currentNews);
   };
   
 
@@ -50,8 +49,7 @@ export const HomeCompoent:React.FC = (): JSX.Element => {
         })
       }
       <Pagination
-        count={newsPerPage}
-        page={indexOfLastNews - 1}
+        count={4}
         onChange={handleChangePage}
       />
     </div>
