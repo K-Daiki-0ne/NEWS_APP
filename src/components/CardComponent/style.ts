@@ -1,3 +1,4 @@
+import { colors } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyle = makeStyles({
@@ -10,7 +11,11 @@ const useStyle = makeStyles({
   },
   text : {
     fontSize: "16px",
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: 'black'
+  },
+  link: {
+    textDecoration: 'none'
   }
 });
 
