@@ -4,6 +4,7 @@ import { newsRequest } from '../api/news';
 import { NewsType } from '../type/news';
 import CardComponent from './CardComponent/CardComponent';
 import HomeLoding from './HomeLoading/HomeLoading';
+import useStyle from './style';
 
 export const HomeCompoent:React.FC = (): JSX.Element => {
   const [news, setNews] = useState<NewsType[]>([]);
@@ -17,6 +18,8 @@ export const HomeCompoent:React.FC = (): JSX.Element => {
     .then(() => setLoading(true))
     .catch(() => console.log('API Connect ...NO'));
   }, []);
+
+  const classes = useStyle()
 
   // Get current news
   const newsPerPage: number = 5;
@@ -37,9 +40,11 @@ export const HomeCompoent:React.FC = (): JSX.Element => {
         currentNews.map((news: NewsType, index: number) => {
           return (
           <React.Fragment key={index}>
-            <CardComponent 
-              props={news}
-            />
+            <div className={classes.mg}>
+              <CardComponent 
+                props={news}
+              />
+            </div>
           </React.Fragment>
           )
         })
