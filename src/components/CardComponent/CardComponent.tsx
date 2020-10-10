@@ -4,6 +4,7 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
+import useStyle from './style';
 import { NewsType } from '../../type/news';
 
 type Props = {
@@ -11,11 +12,12 @@ type Props = {
 }
 
 const CardComponent: React.FC<Props> = ({ props }): JSX.Element => {
-  console.log(props)
+  const classes = useStyle();
   return (
-    <Card>
+    <Card className={classes.root}>
       <CardActionArea>
         <CardMedia
+          className={classes.image}
           image={props.urlToImage}
           title="Contemplative Reptile"
         />
