@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "server": "ts-node --project tsconfig.server.json src/function/index.ts"
+    "server": "ts-node --project tsconfig.server.json src/function/index.ts",
+    "test": "jest"
   },
   "dependencies": {
     "@material-ui/lab": "^4.0.0-alpha.56",
@@ -32,6 +33,7 @@
     "enzyme-adapter-react-16": "^1.15.5",
     "enzyme-to-json": "^3.6.1",
     "jest": "^26.5.2",
+    "jest-css-modules": "^2.1.0",
     "react-test-renderer": "^16.13.1",
     "ts-jest": "^26.4.1",
     "ts-node": "^9.0.0",
