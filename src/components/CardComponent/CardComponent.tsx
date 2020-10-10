@@ -22,7 +22,7 @@ const CardComponent: React.FC<Props> = ({ props }): JSX.Element => {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h5" component="h2" className={classes.text}>
             {props.title}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
