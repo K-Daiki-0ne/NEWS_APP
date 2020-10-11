@@ -17,11 +17,17 @@ const CardComponent: React.FC<Props> = ({ props }): JSX.Element => {
     <Card className={classes.root}>
       <a href={props.url} className={classes.link}>
         <CardActionArea>
-          <CardMedia
-            className={classes.image}
-            image={props.urlToImage}
-            title="Contemplative Reptile"
-          />
+          {
+            props.urlToImage ? (
+              <CardMedia
+                className={classes.image}
+                image={props.urlToImage}
+                title="Contemplative Reptile"
+              />
+            ) : (
+              <p>No image</p>
+            )
+          }
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2" className={classes.text}>
               {props.title}
